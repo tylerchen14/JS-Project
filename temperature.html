@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="temperature.css">
+</head>
+
+<body>
+    <form>
+        <h1>轉換氣溫吧</h1>
+        <input type="number" id="textbox" value="0"><br>
+
+        <input type="radio" id="tocelsius" name="unit">
+        <label for="tocelsius">°F 👉 °C</label>
+        <br>
+        <input type="radio" id="tofahren" name="unit">
+        <label for="tofahren">°C 👉 °F</label>
+        <br>
+        <button type="button" onclick="convert()">submit</button>
+        <p class="result"></p>
+
+    </form>
+    <script src="temperature.js"></script>
+</body>
+
+</html>

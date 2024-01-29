@@ -1,0 +1,27 @@
+body {
+    background-image: url(clock/yu-kato-dNWGjvrG0QA-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.clock {
+    font-family: monospace;
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(4px);
+    background-color: hsl(0, 2%, 71%, 0.3);
+    width: 100%;
+}

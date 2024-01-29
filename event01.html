@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .click {
+            background-color: rgb(104, 243, 192);
+            width: 300px;
+            height: 300px;
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        button{
+            font-size: 2rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="click">
+        click me 🥹
+    </div>
+    <button class="button">Click</button>
+
+    <script>
+        let click = document.querySelector('.click');
+        let button = document.querySelector('.button');
+
+
+        button.addEventListener('click', event => {
+            click.style.backgroundColor = "tomato";
+            click.style.color = "white";
+            click.innerHTML = "ohhh no! 🤕"
+        })
+
+        button.addEventListener('mouseover', event => {
+            click.style.backgroundColor = "yellow";
+            click.style.color = "black";
+            click.innerHTML = "don't do it 😨"
+        })
+
+        button.addEventListener('mouseout', event => {
+            click.style.backgroundColor = "rgb(104, 243, 192)";
+            click.style.color = "black";
+            click.innerHTML = "click me 🥹"
+        })
+
+
+    </script>
+</body>
+
+</html>

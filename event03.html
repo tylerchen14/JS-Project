@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myButton {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="myButton">Hide</button><br>
+
+    <img src="dice/6.png" class="myImg" width="200px">
+
+
+    <script>
+        let myButton = document.querySelector('.myButton')
+        let myImg = document.querySelector('.myImg')
+
+
+
+        myButton.addEventListener("click", event => {
+            if (myImg.style.display === "none") {
+                myButton.innerHTML = "Hide"
+                myImg.style.display = "block";
+            } else {
+                myImg.style.display = "none";
+                myButton.innerHTML = "Show"
+            }
+        })
+
+
+        // mybuttons.forEach(button => {
+        //     button.addEventListener("mouseover", event => {
+        //         event.target.style.backgroundColor = "steelblue"
+        //     })
+        // })
+
+    </script>
+</body>
+
+</html>
