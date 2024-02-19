@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./search.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>學員名單</h1>
+
+    <input type="text" class="fullName">
+    <button class="search">搜尋姓名</button>
+    <button class="searchAge">搜尋年齡(以上)</button>
+
+    <div class="loader">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="root"></div>
+  </div>
+
+  
+  <script type="module" src="search.js"></script>
+</body>
+
+</html>
