@@ -13,22 +13,30 @@
   <div class="container">
     <h1>學員名單</h1>
 
-    <input type="text" class="fullName">
-    <button class="search">搜尋姓名</button>
-    <button class="searchAge">搜尋年齡(以上)</button>
+    <div class="allBtn">
+      <input type="text" class="fullName"><br>
+      <button class="search">搜尋姓名</button>
+      <button class="searchAge">搜尋年齡(👆)</button>
+      <button class="sortBtnASC">年齡排序（👇）</button>
+      <button class="sortBtnDESC">年齡排序（👆）</button>
+    </div>
 
-    <div class="loader">
-      <div class="lds-ellipsis">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="loader-container">
+      <div class="loader">
+        <div class="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </div>
-    <div id="root"></div>
+    <div class="result">
+      <div id="root"></div>
+    </div>
   </div>
 
-  
+
   <script type="module" src="search.js"></script>
 </body>
 
