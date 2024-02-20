@@ -18,7 +18,7 @@ function convert(){
         result.innerHTML=temp.toFixed(1)+"°F"
     }
     else{
-        result.innerHTML="從上方點選項目";
+        result.innerHTML="請點選轉換項目";
     }
 
 

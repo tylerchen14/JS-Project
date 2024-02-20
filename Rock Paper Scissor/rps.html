@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>猜拳</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -72,27 +72,27 @@
 </head>
 
 <body>
-    <h1>Rock Paper Scissor</h1>
+    <h1>剪刀石頭布</h1>
     <div class="choice">
-        <button onclick="playgame('rock')">✊</button>
-        <button onclick="playgame('paper')">🖐️</button>
-        <button onclick="playgame('scissor')">✌️</button>
+        <button onclick="playgame('石頭')">✊</button>
+        <button onclick="playgame('布')">🖐️</button>
+        <button onclick="playgame('剪刀')">✌️</button>
     </div>
 
-    <div class="playerdisplay">Player: </div>
-    <div class="computerdisplay">Computer: </div>
-    <div class="gameresult">Who will win🧐</div>
+    <div class="playerdisplay">你出: </div>
+    <div class="computerdisplay">電腦出: </div>
+    <div class="gameresult">猜拳勝負開始🧐</div>
 
-    <div class="scoredisplay">Player Score:
+    <div class="scoredisplay">你的積分:
         <span class="playerscoredisplay">0</span>
     </div>
 
-    <div class="scoredisplay">Computer Score:
+    <div class="scoredisplay">電腦積分:
         <span class="computerscoredisplay">0</span>
     </div>
 
     <script>
-        let choice = ['rock', 'paper', 'scissor'];
+        let choice = ['石頭', '布', '剪刀'];
         let playerdisplay = document.querySelector('.playerdisplay');
         let computerdisplay = document.querySelector('.computerdisplay');
         let gameresult = document.querySelector('.gameresult');
@@ -107,42 +107,42 @@
             let result = ''
 
             if (playerchoice === computerchoice) {
-                result = 'A Tie 🥰'
+                result = '平手 🥰'
             } else {
                 switch (playerchoice) {
-                    case "rock":
-                        result = (computerchoice === "scissor") ? "You Win 🤩" : "You Lose 😭"
+                    case "石頭":
+                        result = (computerchoice === "剪刀") ? "你贏了 🤩" : "你輸了 😭"
 
                         break;
-                    case "paper":
-                        result = (computerchoice === "rock") ? "You Win 🤩" : "You Lose 😭"
+                    case "布":
+                        result = (computerchoice === "石頭") ? "你贏了 🤩" : "你輸了 😭"
 
                         break;
-                    case "scissor":
-                        result = (computerchoice === "paper") ? "You Win 🤩" : "You Lose 😭"
+                    case "剪刀":
+                        result = (computerchoice === "布") ? "你贏了 🤩" : "你輸了 😭"
 
                         break;
                 }
             }
 
-            playerdisplay.innerHTML = `Player：${playerchoice}`
-            computerdisplay.innerHTML = `Computer：${computerchoice}`
+            playerdisplay.innerHTML = `你出 ${playerchoice}`
+            computerdisplay.innerHTML = `電腦出 ${computerchoice}`
             gameresult.innerHTML = result;
 
             gameresult.classList.remove("win", "lose", "tie");
 
             switch (result) {
-                case "You Win 🤩":
+                case "你贏了 🤩":
                     gameresult.classList.add('win');
                     playerscore++
                     playerscoredisplay.innerHTML = playerscore
                     break;
-                case "You Lose 😭":
+                case "你輸了 😭":
                     gameresult.classList.add('lose');
                     computerscore++
                     computerscoredisplay.innerHTML = computerscore
                     break;
-                case 'A Tie 🥰':
+                case '平手 🥰':
                     gameresult.classList.add('tie');
                     break;
             }
