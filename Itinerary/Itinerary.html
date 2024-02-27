@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>輸入行程</title>
-    <link rel="stylesheet" href="./Itinerary.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>輸入行程</h1>
-      <label for="country">國家: </label>
-      <input type="text" class="countryInput" /> <br />
-      <label for="travelLen">旅遊天數: </label>
-      <select name="travelLen" id="travelLen">
-        <option value="" disabled selected>請選擇天數</option>
-        <option value="1">一天</option>
-        <option value="2">二天</option>
-        <option value="3">三天</option>
-        <option value="4">四天</option>
-        <option value="5">五天</option>
-        <option value="6">六天</option>
-        <option value="7">七天</option>
-      </select>
-      <br />
-      <label for="travelDate">旅遊時間:</label>
-      <input type="date" class="startTime" /> -
-      <input type="date" class="endTime" />
-      <br />
-      <label for="budget">預算: </label>
-      <input type="number" class="budgeInput" />
-      <br />
-      <button type="button" class="submitBtn">確認</button>
-      <div class="warning"></div>
-      <hr />
 
-      <h1 class="countryDisplay"></h1>
-      <table>
-        <thead>
-          <th class="headerScheduleDisplay"></th>
-        </thead>
-        <tbody class="scheduleDisplay"></tbody>
-      </table>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>輸入行程</title>
+  <link rel="stylesheet" href="./Itinerary.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="avatar">
+      <!-- <div class="notice">改頭像</div> -->
+      <img src="./cat.png">
+      <input type="file" class="upload-head-shot">
     </div>
+    <h1>輸入行程</h1>
+    <label for="country">國家: </label>
+    <input type="text" class="countryInput" /> <br />
+    <label for="travelLen">旅遊天數: </label>
+    <input type="text" list="travelLen">
+    <datalist name="travelLen" id="travelLen">
+      <option disabled selected>請選擇天數</option>
+      <option>一天</option>
+      <option>二天</option>
+      <option>三天</option>
+      <option>四天</option>
+      <option>五天</option>
+      <option>六天</option>
+      <option>七天</option>
+    </datalist>
+    <br />
+    <label for="travelDate">旅遊時間:</label>
+    <input type="date" class="startTime" /> -
+    <input type="date" class="endTime" />
+    <br />
+    <label for="budget">預算: </label>
+    <input type="number" class="budgeInput" />
+    <br />
+    <button type="button" class="submitBtn">確認</button>
+    <div class="warning"></div>
+    <hr />
 
-    <script src="./Itinerary.js"></script>
-  </body>
+    <h1 class="countryDisplay"></h1>
+    <table>
+      <thead>
+        <th class="headerScheduleDisplay"></th>
+      </thead>
+      <tbody class="scheduleDisplay"></tbody>
+    </table>
+  </div>
+
+  <script src="./Itinerary.js"></script>
+</body>
+
 </html>

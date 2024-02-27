@@ -12,40 +12,40 @@ let warning = document.querySelector('.warning')
 
 
 submit.addEventListener("click", () => {
-    // 國家輸入
-    countryDisplay.innerHTML = countryInput.value;
-    countryInput.value = "";
+  // 國家輸入
+  countryDisplay.innerHTML = countryInput.value;
+  countryInput.value = "";
 
-    // 旅遊天數輸入
-    document.createElement("tr");
+  // 旅遊天數輸入
+  document.createElement("tr");
 
-    if (headerScheduleDisplay.innerHTML === "") {
-        headerScheduleDisplay.innerHTML += `共出門${travelLen.value}天<br>
+  if (headerScheduleDisplay.innerHTML === "") {
+    headerScheduleDisplay.innerHTML += `共出門${travelLen.value}天<br>
     <td>時間</td>
     <td>行程</td>
     <td>地址</td>
     <td>金額</td>
     <td>備註</td>
     <td>刪除</td>`;
-        travelLen.value = "";
-    } else {
-        headerScheduleDisplay.innerHTML = `共出門${travelLen.value}天<br>
+    travelLen.value = "";
+  } else {
+    headerScheduleDisplay.innerHTML = `共出門${travelLen.value}天<br>
     <td>時間</td>
     <td>行程</td>
     <td>地址</td>
     <td>金額</td>
     <td>備註</td>
     <td>刪除</td>`;
-        travelLen.value = "";
-    }
+    travelLen.value = "";
+  }
 
-    // 旅遊時間輸入
+  // 旅遊時間輸入
 
-    if (startTime.value === "" || endTime.value === "") {
-        warning.innerHTML = "尚未輸入日期"
-        warning.style = "color:red"
-        headerScheduleDisplay.innerHTML = ""
-    }
+  if (startTime.value === "" || endTime.value === "") {
+    warning.innerHTML = "尚未輸入日期"
+    warning.style = "color:red"
+    headerScheduleDisplay.innerHTML = ""
+  }
 
 
 
@@ -56,3 +56,18 @@ submit.addEventListener("click", () => {
 
 
 });
+
+
+// 大頭上傳
+window.addEventListener('load', () => {
+  document.querySelector('.upload-head-shot').addEventListener('change', (e) => {
+    let file = e.target.files[0]
+
+    let reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.addEventListener('load', () => {
+      let headShot = document.querySelector('.avatar img')
+        headShot.src = reader.result
+    })
+  })
+})
