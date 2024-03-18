@@ -1,0 +1,39 @@
+td {
+  width: 100px;
+  text-align: center;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tr {
+  display: flex;
+  text-align: center;
+  border-bottom: black 1px solid;
+  align-items: center;
+}
+
+table {
+  border: black 1px solid;
+}
+
+.inputBlock {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  margin: 20px auto;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+  border: black 1px solid;
+}
+
+.block {
+  margin: 6px;
+}

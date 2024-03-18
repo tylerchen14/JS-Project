@@ -8,21 +8,21 @@ let running = true;
 
 while (running) {
 
-    guess = window.prompt(`please guess a number between ${min} and ${max}`)
+    guess = window.prompt(`在 ${min} 與 ${max} 之間猜一個數字`)
     guess = Number(guess)
 
     if (isNaN(guess)) {
-        alert("please enter a number!")
+        alert("請輸入數字")
     } else if (guess < min && guess > max) {
-        alert("please enter a VALID number!")
+        alert("請輸入正確數字")
     } else {
         attempts++
         if (guess < answer) {
-            alert("too low")
+            alert("高一點")
         } else if (guess > answer) {
-            alert("too high")
+            alert("低一點")
         }else{
-            alert(`WINNER! The answer is ${answer} and it took you ${attempts} attempts`)
+            alert(`你猜對了！ 答案是 ${answer}，你總共猜了 ${attempts} 次`)
             running = false;
         }
     }}

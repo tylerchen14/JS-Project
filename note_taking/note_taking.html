@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記帳App</title>
+    <link rel="stylesheet" href="./note_taking.css">
+</head>
+
+<body>
+
+    <!-- 新增加入資料時，時間排序 -->
+    <!-- 去除最後一列的 bottom border -->
+    <!-- 新增完資料後，會清空輸入列 -->
+
+    <div class="container">
+        <div class="inputBlock">
+            <div class="block">
+                <label for="date">日期：</label>
+                <input type="date" id="date">
+            </div>
+            <div class="block">
+                <label for="item">項目：</label>
+                <input type="text" id="item">
+            </div>
+            <div class="block">
+                <label for="cost">金額：</label>
+                <input type="number" id="cost">
+            </div>
+            <button class="submit">送出</button>
+        </div>
+
+        <table>
+            <tr>
+                <td>日期</td>
+                <td>項目</td>
+                <td>花費</td>
+                <td>刪除</td>
+            </tr>
+            <tbody class="importInfo">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./note_taking.js"></script>
+</body>
+
+</html>

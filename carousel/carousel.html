@@ -2,115 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>輪播牆</title>
-    <style>
-        .slider {
-            position: relative;
-            width: 100%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .slider img {
-            width: 100%;
-            display: none;
-        }
-
-        img.displayslide {
-            display: block;
-            animation: fade;
-            animation-duration: 1.5s;
-        }
-
-        .slider button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-            background-color: hsl(0, 0%, 0%, 50%);
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 10px 15px;
-        }
-
-        .prev {
-            left: 0;
-        }
-
-        .next {
-            right: 0;
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .5
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>輪播牆（圖片ver.）</title>
+  <link rel="stylesheet" href="./carousel.css">
 </head>
 
 <body>
+  <div class="container">
     <div class="slider">
-        <div class="slides">
-            <img class="slide" src="./pic1.jpg" alt="pic #1">
-            <img class="slide" src="./pic2.jpg" alt="pic #2">
-            <img class="slide" src="./pic3.jpg" alt="pic #3">
-        </div>
-        <button class="prev" onclick="prevslide()">&#10094</button>
-        <button class="next" onclick="nextslide()">&#10095</button>
+      <div class="slides">
+        <img class="slide" src="https://www.kpopn.com/upload/fa639a8e1ae64ce8f2c0.jpg" alt="Twice Fancy Cover"></img>
+        <img class="slide" src="https://cdn1.wishnote.tw/200/2018/04/24/200_91441_1524554375.jpeg"
+          alt="Twice What is Love MV"></img>
+        <img class="slide" src="https://img.ltn.com.tw/Upload/ent/page/800/2021/11/06/phpqJ2lIs.jpg"
+          alt="Twice Formula of Love Cover"></img>
+        <img class="slide" src="https://static.popdaily.com.tw/u/202109/4b573e45-9586-41e7-bd5d-c391bbfb2a60.jpg"
+          alt="Twice The Feels Cover"></img>
+        <img class="slide" src="https://thebiaslistcom.files.wordpress.com/2024/02/twice-i-got-you.jpeg"
+          alt="Twice I Got You Cover"></img>
+      </div>
     </div>
-    <script>
-        let slides = document.querySelectorAll('.slides img')
-        let slidesindex = 0;
-        let intervalid = null;
+    <button class="prev button" onclick="prevslide()">&#10094</button>
+    <button class="next button" onclick="nextslide()">&#10095</button>
+    <ul class="pagination-container">
+      <li class="pagination"></li>
+      <li class="pagination"></li>
+      <li class="pagination"></li>
+      <li class="pagination"></li>
+      <li class="pagination"></li>
+    </ul>
+  </div>
 
-        document.addEventListener('DOMContentLoaded', startslider)
-
-        function startslider() {
-
-            if (slides.length > 0) {
-                slides[slidesindex].classList.add('displayslide')
-                intervalid = setInterval(nextslide, 3000)
-            }
-        }
-
-        function showslider(index) {
-
-            if (index >= slides.length) {
-                slidesindex = 0;
-            }
-            else if (index < 0) {
-                slidesindex = slides.length - 1
-            }
-
-
-            slides.forEach(slide => {
-                slide.classList.remove('displayslide')
-            })
-            slides[slidesindex].classList.add('displayslide')
-        }
-
-
-        function nextslide() {
-            slidesindex++
-            showslider(slidesindex)
-        }
-
-        function prevslide() {
-            clearInterval(intervalid)
-            slidesindex--
-            showslider(slidesindex)
-        }
-
-
-    </script>
+  <script src="./carousel.js"></script>
 </body>
 
 </html>
