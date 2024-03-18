@@ -11,29 +11,27 @@
 <body>
   <div class="container">
     <div class="avatar">
-      <!-- <div class="notice">改頭像</div> -->
       <img src="./cat.png">
       <input type="file" class="upload-head-shot">
     </div>
+
     <h1>輸入行程</h1>
     <label for="country">國家: </label>
     <input type="text" class="countryInput" /> <br />
     <label for="travelLen">旅遊天數: </label>
-    <input type="text" list="travelLen">
-    <datalist name="travelLen" id="travelLen">
+    <select id="travelLen">
       <option disabled selected>請選擇天數</option>
-      <option>一天</option>
-      <option>二天</option>
-      <option>三天</option>
-      <option>四天</option>
-      <option>五天</option>
-      <option>六天</option>
-      <option>七天</option>
-    </datalist>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
     <br />
-    <label for="travelDate">旅遊時間:</label>
-    <input type="date" class="startTime" /> -
-    <input type="date" class="endTime" />
+    <label for="travelDate">開始日期:</label>
+    <input type="date" class="startTime" />
     <br />
     <label for="budget">預算: </label>
     <input type="number" class="budgeInput" />
@@ -47,7 +45,9 @@
       <thead>
         <th class="headerScheduleDisplay"></th>
       </thead>
-      <tbody class="scheduleDisplay"></tbody>
+      <tbody class="scheduleDisplay">
+        <button class="plusSchedule">+</button>
+      </tbody>
     </table>
   </div>
 
